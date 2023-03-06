@@ -1,0 +1,10 @@
+---
+# ACI Faults Reports - {{ add_title }}
+
+Fault Counts: **{{ faults_system.totalCount }}**
+
+| Serverity | Type | Code | Domain | Cause |
+
+{% for fault in faults_system.imdata %}
+**{{ fault.faultSummary.attributes.severity }}** | **{{ fault.faultSummary.attributes.type }}** | **{{ fault.faultSummary.attributes.code }}** | **{{ fault.faultSummary.attributes.domain }}** | `{{ fault.faultSummary.attributes.cause }}`
+{% endfor %}

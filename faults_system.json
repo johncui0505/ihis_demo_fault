@@ -1,0 +1,773 @@
+{
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "deprecations": [
+        {
+            "msg": "Distribution ubuntu 20.04 on host apic should use /usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior Ansible releases. A future Ansible release will default to using the discovered platform python for this host. See https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information",
+            "version": "2.12"
+        }
+    ],
+    "failed": false,
+    "imdata": [
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "threshold-crossed",
+                    "childAction": "",
+                    "code": "F107187",
+                    "count": "10",
+                    "descr": "Threshold crossing alert for class fvOverallHealth1d, property healthAvg",
+                    "dn": "fltcode-F107187",
+                    "domain": "infra",
+                    "nonAcked": "10",
+                    "nonDelegated": "10",
+                    "nonDelegatedAndNonAcked": "10",
+                    "rule": "tca-fv-overall-health1d-health-avg",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "counter",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "ntp-error",
+                    "childAction": "",
+                    "code": "F1574",
+                    "count": "3",
+                    "descr": "This fault occurs when a ntp provider in the ntp configuration on a controller has problems",
+                    "dn": "fltcode-F1574",
+                    "domain": "infra",
+                    "nonAcked": "3",
+                    "nonDelegated": "3",
+                    "nonDelegatedAndNonAcked": "3",
+                    "rule": "datetime-ntpq-failed",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "ntp",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "invalid-configuration",
+                    "childAction": "",
+                    "code": "F3576",
+                    "count": "200",
+                    "descr": "This fault occurs when BD is stretched and has Epg deployed on the Remote Leaf",
+                    "dn": "fltcode-F3576",
+                    "domain": "tenant",
+                    "nonAcked": "200",
+                    "nonDelegated": "100",
+                    "nonDelegatedAndNonAcked": "100",
+                    "rule": "fv-bdconfig-issues-invalid-configuration",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "management",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "threshold-crossed",
+                    "childAction": "",
+                    "code": "F93241",
+                    "count": "7",
+                    "descr": "Threshold crossing alert for class compHostStats15min, property cpuUsageAvg",
+                    "dn": "fltcode-F93241",
+                    "domain": "infra",
+                    "nonAcked": "7",
+                    "nonDelegated": "7",
+                    "nonDelegatedAndNonAcked": "7",
+                    "rule": "tca-comp-host-stats15min-cpu-usage-avg",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "counter",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "threshold-crossed",
+                    "childAction": "",
+                    "code": "F97752",
+                    "count": "2",
+                    "descr": "Threshold crossing alert for class eqptEgrTotal5min, property bytesLast",
+                    "dn": "fltcode-F97752",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "tca-eqpt-egr-total5min-bytes-last",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "counter",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "interface-physical-down",
+                    "childAction": "",
+                    "code": "F0532",
+                    "count": "9",
+                    "descr": "This fault occurs when a port is down and is in use for epg",
+                    "dn": "fltcode-F0532",
+                    "domain": "access",
+                    "nonAcked": "9",
+                    "nonDelegated": "9",
+                    "nonDelegatedAndNonAcked": "9",
+                    "rule": "ethpm-if-port-down-infra-epg",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "port-down",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "packets-dropped",
+                    "childAction": "",
+                    "code": "F1545",
+                    "count": "1",
+                    "descr": "This fault occurs when a significant number of packet drops are detected by a configured and enabled Atomic Counter",
+                    "dn": "fltcode-F1545",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "dbg-ac-path-aon-going-atomic-counter-drops-major",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "atomic-counter",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "resolution-failed",
+                    "childAction": "",
+                    "code": "F0948",
+                    "count": "2",
+                    "descr": "The object refers to an object that was not found.",
+                    "dn": "fltcode-F0948",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "fv-rsbdto-profile-resolve-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "relation-resolution",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "configuration-failed",
+                    "childAction": "",
+                    "code": "F1559",
+                    "count": "16",
+                    "descr": "This fault is raised when there is a SPAN destination related configuration issue.",
+                    "dn": "fltcode-F1559",
+                    "domain": "management",
+                    "nonAcked": "16",
+                    "nonDelegated": "8",
+                    "nonDelegatedAndNonAcked": "8",
+                    "rule": "span-dest-config-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "span-config",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "interface-vpc-impaired",
+                    "childAction": "",
+                    "code": "F2705",
+                    "count": "2",
+                    "descr": "This fault occurs when vpc interface goes down while peer interface is up.",
+                    "dn": "fltcode-F2705",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "vpc-if-if-impaired",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "if-impaired",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "threshold-crossed",
+                    "childAction": "",
+                    "code": "F110425",
+                    "count": "2",
+                    "descr": "Threshold crossing alert for class l2IngrBytesAg15min, property dropCum",
+                    "dn": "fltcode-F110425",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "tca-l2-ingr-bytes-ag15min-drop-cum",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "counter",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "fsm-failed",
+                    "childAction": "",
+                    "code": "F609802",
+                    "count": "2",
+                    "descr": "Task or FSM failure on object of class compPolCont",
+                    "dn": "fltcode-F609802",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "fsm-update-ctrlr-no-of-uplinks-pol-fsm-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "task-ifc-vmmmgr-comp-pol-cont-update-ctrlr-no-of-uplinks-pol",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "id-certificate-expired",
+                    "childAction": "",
+                    "code": "F3061",
+                    "count": "1",
+                    "descr": "This fault is raised when APIC Controller receives ID certificate expired notification from SA (Smart Agent).",
+                    "dn": "fltcode-F3061",
+                    "domain": "external",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "license-manager-id-certificate-expired",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "smart-licensing",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "unsupported-operation",
+                    "childAction": "",
+                    "code": "F0135",
+                    "count": "6",
+                    "descr": "This fault is raised when remote or external disruptive EPG operations are performed on the Controller.",
+                    "dn": "fltcode-F0135",
+                    "domain": "tenant",
+                    "nonAcked": "6",
+                    "nonDelegated": "3",
+                    "nonDelegatedAndNonAcked": "3",
+                    "rule": "comp-eppd-unsupported-operation",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "epg",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "ip-provisioning-failed",
+                    "childAction": "",
+                    "code": "F1425",
+                    "count": "8",
+                    "descr": "This fault occurs when the operational state of the ipv4 address state is changed to subnet-overlap/no primary/addr already confgd as next hop in a static route",
+                    "dn": "fltcode-F1425",
+                    "domain": "access",
+                    "nonAcked": "8",
+                    "nonDelegated": "8",
+                    "nonDelegatedAndNonAcked": "8",
+                    "rule": "ipv4-addr-oper-st-down",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "oper-state-err",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "span-provision-failed",
+                    "childAction": "",
+                    "code": "F3850",
+                    "count": "5",
+                    "descr": "This fault occurs when span source on a circuit goes to failed state",
+                    "dn": "fltcode-F3850",
+                    "domain": "infra",
+                    "nonAcked": "5",
+                    "nonDelegated": "5",
+                    "nonDelegatedAndNonAcked": "5",
+                    "rule": "span-rs-span-src-to-l2-ckt-ep-att-no-hw-res-span-src-l2",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "oper-state-failed",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "config-error",
+                    "childAction": "",
+                    "code": "F3083",
+                    "count": "2",
+                    "descr": "This fault occurs when multiple MACs have same IP address in the same VRF.",
+                    "dn": "fltcode-F3083",
+                    "domain": "tenant",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "fv-ip-config-error",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "same-ip-address-is-used-by-different-macs-in-the-same-context",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "port-down",
+                    "childAction": "",
+                    "code": "F0103",
+                    "count": "9",
+                    "descr": "This fault occurs when a physical interface on a controller is in the link-down state.",
+                    "dn": "fltcode-F0103",
+                    "domain": "infra",
+                    "nonAcked": "9",
+                    "nonDelegated": "9",
+                    "nonDelegatedAndNonAcked": "9",
+                    "rule": "cnw-phys-if-down",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "equipment",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "span-provision-failed",
+                    "childAction": "",
+                    "code": "F1201",
+                    "count": "6",
+                    "descr": "This fault occurs when span destination goes to failed state",
+                    "dn": "fltcode-F1201",
+                    "domain": "infra",
+                    "nonAcked": "6",
+                    "nonDelegated": "6",
+                    "nonDelegatedAndNonAcked": "6",
+                    "rule": "span-destination-oper-st-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "oper-state-failed",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "dpp-config-error",
+                    "childAction": "",
+                    "code": "F2107",
+                    "count": "2",
+                    "descr": "This fault occurs when Data Plane Policer policy fails.",
+                    "dn": "fltcode-F2107",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "dpp-if-oper-st-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "oper-state-failed",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "fsm-failed",
+                    "childAction": "",
+                    "code": "F606392",
+                    "count": "1",
+                    "descr": "Task or FSM failure on object of class compMgmtNic",
+                    "dn": "fltcode-F606392",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "0",
+                    "nonDelegatedAndNonAcked": "0",
+                    "rule": "fsm-get-mgmt-nic-ip-fsm-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "task-ifc-vmmmgr-comp-mgmt-nic-get-mgmt-nic-ip",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "coop-ep-dampening",
+                    "childAction": "",
+                    "code": "F3696",
+                    "count": "3",
+                    "descr": "This fault occurs when one or more EPs are in freeze state",
+                    "dn": "fltcode-F3696",
+                    "domain": "access",
+                    "nonAcked": "3",
+                    "nonDelegated": "3",
+                    "nonDelegatedAndNonAcked": "3",
+                    "rule": "coop-dom-coop-ep-damp-freeze",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "ep-damp-freeze",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "fsm-failed",
+                    "childAction": "",
+                    "code": "F607897",
+                    "count": "1",
+                    "descr": "Task or FSM failure on object of class hvsLNode",
+                    "dn": "fltcode-F607897",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "0",
+                    "nonDelegatedAndNonAcked": "0",
+                    "rule": "fsm-addor-del-black-hole-port-group-fsm-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "task-ifc-vmmmgr-hvslnode-addor-del-black-hole-port-group",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "operational-issues",
+                    "childAction": "",
+                    "code": "F0132",
+                    "count": "2",
+                    "descr": "This fault is raised when Remote or External disruptive operations on VMM Controller are detected.",
+                    "dn": "fltcode-F0132",
+                    "domain": "external",
+                    "nonAcked": "2",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "comp-ctrlr-operational-issues",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "controller",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "interface-vpc-down",
+                    "childAction": "",
+                    "code": "F1296",
+                    "count": "16",
+                    "descr": "This fault occurs when vpc interface goes down while peer interface is also down.",
+                    "dn": "fltcode-F1296",
+                    "domain": "infra",
+                    "nonAcked": "16",
+                    "nonDelegated": "8",
+                    "nonDelegatedAndNonAcked": "8",
+                    "rule": "vpc-if-if-down",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "if-down",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "connect-failed",
+                    "childAction": "",
+                    "code": "F0130",
+                    "count": "4",
+                    "descr": "This fault is raised when the VMM Controller is marked offline. Recovery is in process.",
+                    "dn": "fltcode-F0130",
+                    "domain": "external",
+                    "nonAcked": "4",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "comp-ctrlr-connect-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "controller",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "configuration-failed",
+                    "childAction": "",
+                    "code": "F1561",
+                    "count": "50",
+                    "descr": "This fault is raised when there is an individual SPAN source related configuration issue.",
+                    "dn": "fltcode-F1561",
+                    "domain": "management",
+                    "nonAcked": "50",
+                    "nonDelegated": "25",
+                    "nonDelegatedAndNonAcked": "25",
+                    "rule": "span-asrc-config-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "span-config",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "protocol-bfd-adjacency-down",
+                    "childAction": "",
+                    "code": "F1483",
+                    "count": "7",
+                    "descr": "This fault occurs when a bfd session is down.",
+                    "dn": "fltcode-F1483",
+                    "domain": "access",
+                    "nonAcked": "7",
+                    "nonDelegated": "7",
+                    "nonDelegatedAndNonAcked": "7",
+                    "rule": "bfd-sess-sess-down",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "sess-down",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "fsm-failed",
+                    "childAction": "",
+                    "code": "F606351",
+                    "count": "1",
+                    "descr": "Task or FSM failure on object of class compPolCont",
+                    "dn": "fltcode-F606351",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "fsm-update-ctrlr-pol-fsm-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "task-ifc-vmmmgr-comp-pol-cont-update-ctrlr-pol",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "connect-failed",
+                    "childAction": "",
+                    "code": "F1676",
+                    "count": "1",
+                    "descr": "This fault is raised when the VMM Controller Agent is not able to communicate with the APIC.",
+                    "dn": "fltcode-F1676",
+                    "domain": "external",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "vmm-agt-status-connect-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "controller",
+                    "type": "communications"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "interface-pcmbr-down",
+                    "childAction": "",
+                    "code": "F0600",
+                    "count": "4",
+                    "descr": "This fault occurs when port has been suspended.",
+                    "dn": "fltcode-F0600",
+                    "domain": "access",
+                    "nonAcked": "4",
+                    "nonDelegated": "4",
+                    "nonDelegatedAndNonAcked": "4",
+                    "rule": "pc-aggr-mbr-if-port-suspended",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "port-suspended",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "rum-ack-not-received",
+                    "childAction": "",
+                    "code": "F4222",
+                    "count": "1",
+                    "descr": "This fault is raised when Smart Agent (SA) failed to receive a RUM report acknowledgement from CSSM or On-Prem.",
+                    "dn": "fltcode-F4222",
+                    "domain": "external",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "license-manager-ack-not-received",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "smart-licensing",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "same-pc-tag-used-multiple-times",
+                    "childAction": "",
+                    "code": "F3255",
+                    "count": "2",
+                    "descr": "This fault occurs when same PC Tag value is used for more than one instances of a class.",
+                    "dn": "fltcode-F3255",
+                    "domain": "tenant",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "fv-abs-def-dci-subs-collided",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "management",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "download-failed",
+                    "childAction": "",
+                    "code": "F0058",
+                    "count": "1",
+                    "descr": "This fault occurs when a firmware download fails",
+                    "dn": "fltcode-F0058",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "firmware-download-download-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "equipment",
+                    "type": "environmental"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "fsm-failed",
+                    "childAction": "",
+                    "code": "F606262",
+                    "count": "1",
+                    "descr": "Task or FSM failure on object of class compCtrlr",
+                    "dn": "fltcode-F606262",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "0",
+                    "nonDelegatedAndNonAcked": "0",
+                    "rule": "fsm-add-fsm-fail",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "fsm-ifc-vmmmgr-comp-ctrlr-add",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "configuration-failed",
+                    "childAction": "",
+                    "code": "F1571",
+                    "count": "1",
+                    "descr": "This fault occurs when a Span Policy fails to deploy due to a missing or invalid destination EPG",
+                    "dn": "fltcode-F1571",
+                    "domain": "tenant",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "span-rs-dest-epg-config-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "span-config",
+                    "type": "config"
+                }
+            }
+        }
+    ],
+    "status": -1,
+    "totalCount": 36
+}

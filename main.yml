@@ -1,0 +1,52 @@
+---
+- hosts: aci
+  connection: local
+  gather_facts: False
+
+  vars:
+    apic_info: &apic_info
+      host:           "{{ aci_host }}"
+      user:           "{{ aci_user }}"
+      password:       "{{ aci_password }}"
+      validate_certs: "{{ aci_valid_cert }}" 
+      use_ssl:        "{{ aci_use_ssl }}" 
+
+  tasks:
+    - include_vars: vars.yml
+    - name: "1] API Request - Collect ACI Faults"
+      aci_rest:
+        <<: *apic_info
+        path:   "/api/node/class/faultSummary.json?query-target-filter=or(eq(faultSummary.severity,\"critical\"),eq(faultSummary.severity,\"major\"))&order-by=faultSummary.severity|desc"
+        method: get
+      register: faults_system
+    
+    - name: "2] (OPTIONAL) Export data to JSON files"
+      copy:
+        content: "{{ faults_system | to_nice_json}}"
+        dest:    "./faults_system.json"
+
+    # - name: "3] Add Message Subject"
+    #   set_fact:
+    #     add_title: "Site 1 Faults"
+
+    - name: "3] Add Message Subject"
+      set_fact:
+        add_title: "{{ message_title }}"
+
+    - name: "4] Convert data to Markdown format"
+      template: 
+        src:  "template/faults_report.j2"
+        dest: "faults_report.md"
+
+    - name: "5] Read Message Sending to Webex Space"
+      debug:    msg="{{lookup('file', 'faults_report.md') }}"
+      register: faults_report
+      no_log:   yes 
+
+    - name: "6] Send Webex"
+      cisco_spark:
+        recipient_type: roomId
+        recipient_id:   "{{ roomID }}"
+        message_type:   markdown
+        personal_token: "{{ token }}"
+        message:        "{{ faults_report.msg }}"
