@@ -16,6 +16,27 @@
                 "attributes": {
                     "cause": "threshold-crossed",
                     "childAction": "",
+                    "code": "F110425",
+                    "count": "2",
+                    "descr": "Threshold crossing alert for class l2IngrBytesAg15min, property dropCum",
+                    "dn": "fltcode-F110425",
+                    "domain": "infra",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "tca-l2-ingr-bytes-ag15min-drop-cum",
+                    "severity": "critical",
+                    "status": "",
+                    "subject": "counter",
+                    "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "threshold-crossed",
+                    "childAction": "",
                     "code": "F107187",
                     "count": "10",
                     "descr": "Threshold crossing alert for class fvOverallHealth1d, property healthAvg",
@@ -182,21 +203,21 @@
         {
             "faultSummary": {
                 "attributes": {
-                    "cause": "configuration-failed",
+                    "cause": "connect-failed",
                     "childAction": "",
-                    "code": "F1559",
-                    "count": "16",
-                    "descr": "This fault is raised when there is a SPAN destination related configuration issue.",
-                    "dn": "fltcode-F1559",
-                    "domain": "management",
-                    "nonAcked": "16",
-                    "nonDelegated": "8",
-                    "nonDelegatedAndNonAcked": "8",
-                    "rule": "span-dest-config-failed",
+                    "code": "F1676",
+                    "count": "1",
+                    "descr": "This fault is raised when the VMM Controller Agent is not able to communicate with the APIC.",
+                    "dn": "fltcode-F1676",
+                    "domain": "external",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "vmm-agt-status-connect-failed",
                     "severity": "major",
                     "status": "",
-                    "subject": "span-config",
-                    "type": "config"
+                    "subject": "controller",
+                    "type": "communications"
                 }
             }
         },
@@ -224,21 +245,21 @@
         {
             "faultSummary": {
                 "attributes": {
-                    "cause": "threshold-crossed",
+                    "cause": "configuration-failed",
                     "childAction": "",
-                    "code": "F110425",
-                    "count": "2",
-                    "descr": "Threshold crossing alert for class l2IngrBytesAg15min, property dropCum",
-                    "dn": "fltcode-F110425",
-                    "domain": "infra",
-                    "nonAcked": "2",
-                    "nonDelegated": "2",
-                    "nonDelegatedAndNonAcked": "2",
-                    "rule": "tca-l2-ingr-bytes-ag15min-drop-cum",
+                    "code": "F1559",
+                    "count": "16",
+                    "descr": "This fault is raised when there is a SPAN destination related configuration issue.",
+                    "dn": "fltcode-F1559",
+                    "domain": "management",
+                    "nonAcked": "16",
+                    "nonDelegated": "8",
+                    "nonDelegatedAndNonAcked": "8",
+                    "rule": "span-dest-config-failed",
                     "severity": "major",
                     "status": "",
-                    "subject": "counter",
-                    "type": "operational"
+                    "subject": "span-config",
+                    "type": "config"
                 }
             }
         },
@@ -308,27 +329,6 @@
         {
             "faultSummary": {
                 "attributes": {
-                    "cause": "ip-provisioning-failed",
-                    "childAction": "",
-                    "code": "F1425",
-                    "count": "8",
-                    "descr": "This fault occurs when the operational state of the ipv4 address state is changed to subnet-overlap/no primary/addr already confgd as next hop in a static route",
-                    "dn": "fltcode-F1425",
-                    "domain": "access",
-                    "nonAcked": "8",
-                    "nonDelegated": "8",
-                    "nonDelegatedAndNonAcked": "8",
-                    "rule": "ipv4-addr-oper-st-down",
-                    "severity": "major",
-                    "status": "",
-                    "subject": "oper-state-err",
-                    "type": "operational"
-                }
-            }
-        },
-        {
-            "faultSummary": {
-                "attributes": {
                     "cause": "span-provision-failed",
                     "childAction": "",
                     "code": "F3850",
@@ -350,21 +350,21 @@
         {
             "faultSummary": {
                 "attributes": {
-                    "cause": "config-error",
+                    "cause": "ip-provisioning-failed",
                     "childAction": "",
-                    "code": "F3083",
-                    "count": "2",
-                    "descr": "This fault occurs when multiple MACs have same IP address in the same VRF.",
-                    "dn": "fltcode-F3083",
-                    "domain": "tenant",
-                    "nonAcked": "2",
-                    "nonDelegated": "2",
-                    "nonDelegatedAndNonAcked": "2",
-                    "rule": "fv-ip-config-error",
+                    "code": "F1425",
+                    "count": "8",
+                    "descr": "This fault occurs when the operational state of the ipv4 address state is changed to subnet-overlap/no primary/addr already confgd as next hop in a static route",
+                    "dn": "fltcode-F1425",
+                    "domain": "access",
+                    "nonAcked": "8",
+                    "nonDelegated": "8",
+                    "nonDelegatedAndNonAcked": "8",
+                    "rule": "ipv4-addr-oper-st-down",
                     "severity": "major",
                     "status": "",
-                    "subject": "same-ip-address-is-used-by-different-macs-in-the-same-context",
-                    "type": "config"
+                    "subject": "oper-state-err",
+                    "type": "operational"
                 }
             }
         },
@@ -455,6 +455,27 @@
         {
             "faultSummary": {
                 "attributes": {
+                    "cause": "same-pc-tag-used-multiple-times",
+                    "childAction": "",
+                    "code": "F3255",
+                    "count": "2",
+                    "descr": "This fault occurs when same PC Tag value is used for more than one instances of a class.",
+                    "dn": "fltcode-F3255",
+                    "domain": "tenant",
+                    "nonAcked": "2",
+                    "nonDelegated": "2",
+                    "nonDelegatedAndNonAcked": "2",
+                    "rule": "fv-abs-def-dci-subs-collided",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "management",
+                    "type": "config"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
                     "cause": "coop-ep-dampening",
                     "childAction": "",
                     "code": "F3696",
@@ -470,6 +491,27 @@
                     "status": "",
                     "subject": "ep-damp-freeze",
                     "type": "operational"
+                }
+            }
+        },
+        {
+            "faultSummary": {
+                "attributes": {
+                    "cause": "download-failed",
+                    "childAction": "",
+                    "code": "F0058",
+                    "count": "1",
+                    "descr": "This fault occurs when a firmware download fails",
+                    "dn": "fltcode-F0058",
+                    "domain": "infra",
+                    "nonAcked": "1",
+                    "nonDelegated": "1",
+                    "nonDelegatedAndNonAcked": "1",
+                    "rule": "firmware-download-download-failed",
+                    "severity": "major",
+                    "status": "",
+                    "subject": "equipment",
+                    "type": "environmental"
                 }
             }
         },
@@ -623,27 +665,6 @@
         {
             "faultSummary": {
                 "attributes": {
-                    "cause": "connect-failed",
-                    "childAction": "",
-                    "code": "F1676",
-                    "count": "1",
-                    "descr": "This fault is raised when the VMM Controller Agent is not able to communicate with the APIC.",
-                    "dn": "fltcode-F1676",
-                    "domain": "external",
-                    "nonAcked": "1",
-                    "nonDelegated": "1",
-                    "nonDelegatedAndNonAcked": "1",
-                    "rule": "vmm-agt-status-connect-failed",
-                    "severity": "major",
-                    "status": "",
-                    "subject": "controller",
-                    "type": "communications"
-                }
-            }
-        },
-        {
-            "faultSummary": {
-                "attributes": {
                     "cause": "interface-pcmbr-down",
                     "childAction": "",
                     "code": "F0600",
@@ -680,48 +701,6 @@
                     "status": "",
                     "subject": "smart-licensing",
                     "type": "config"
-                }
-            }
-        },
-        {
-            "faultSummary": {
-                "attributes": {
-                    "cause": "same-pc-tag-used-multiple-times",
-                    "childAction": "",
-                    "code": "F3255",
-                    "count": "2",
-                    "descr": "This fault occurs when same PC Tag value is used for more than one instances of a class.",
-                    "dn": "fltcode-F3255",
-                    "domain": "tenant",
-                    "nonAcked": "2",
-                    "nonDelegated": "2",
-                    "nonDelegatedAndNonAcked": "2",
-                    "rule": "fv-abs-def-dci-subs-collided",
-                    "severity": "major",
-                    "status": "",
-                    "subject": "management",
-                    "type": "config"
-                }
-            }
-        },
-        {
-            "faultSummary": {
-                "attributes": {
-                    "cause": "download-failed",
-                    "childAction": "",
-                    "code": "F0058",
-                    "count": "1",
-                    "descr": "This fault occurs when a firmware download fails",
-                    "dn": "fltcode-F0058",
-                    "domain": "infra",
-                    "nonAcked": "1",
-                    "nonDelegated": "1",
-                    "nonDelegatedAndNonAcked": "1",
-                    "rule": "firmware-download-download-failed",
-                    "severity": "major",
-                    "status": "",
-                    "subject": "equipment",
-                    "type": "environmental"
                 }
             }
         },
@@ -769,5 +748,5 @@
         }
     ],
     "status": -1,
-    "totalCount": 36
+    "totalCount": 35
 }
