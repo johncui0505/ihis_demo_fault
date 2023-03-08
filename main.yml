@@ -16,7 +16,8 @@
     - name: "1] API Request - Collect ACI Faults"
       aci_rest:
         <<: *apic_info
-        path:   "/api/node/class/faultSummary.json?query-target-filter=or(eq(faultSummary.severity,\"critical\"),eq(faultSummary.severity,\"major\"))&order-by=faultSummary.severity|desc"
+        # path:   "/api/node/class/faultSummary.json?query-target-filter=or(eq(faultSummary.severity,\"critical\"),eq(faultSummary.severity,\"major\"))&order-by=faultSummary.severity|desc"
+        path:   "/api/node/class/faultSummary.json?query-target-filter=or(eq(faultSummary.severity,\"critical\"),eq(faultSummary.severity,\"major\"),eq(faultSummary.severity,\"minor\"))&order-by=faultSummary.severity|desc"
         method: get
       register: faults_system
     
