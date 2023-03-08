@@ -25,10 +25,6 @@
         content: "{{ faults_system | to_nice_json}}"
         dest:    "./faults_system.json"
 
-    # - name: "3] Add Message Subject"
-    #   set_fact:
-    #     add_title: "Site 1 Faults"
-
     - name: "3] Add Message Subject"
       set_fact:
         add_title: "{{ message_title }}"
