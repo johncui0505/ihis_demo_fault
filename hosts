@@ -2,10 +2,10 @@
 apic
 
 [aci:vars]
-aci_host=10.106.236.54
+aci_host=<ACI IP>
 aci_port=443
-aci_user=jiacui
-aci_password=cisco!123
+aci_user=<Username>
+aci_password=<Password>
 aci_valid_cert=false
 aci_use_ssl=false
 
